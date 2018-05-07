@@ -61,7 +61,7 @@ dtm_build1 <- function(raw_corpus, tfidf=FALSE)
   # converting raw corpus to tibble to tidy DF
   textdf = data_frame(text = raw_corpus);    
   
-  tidy_df = text_df %>%   
+  tidy_df = textdf %>%   
     mutate(doc = row_number()) %>%
     unnest_tokens(word, text) %>% 
     anti_join(stop_words) %>%
