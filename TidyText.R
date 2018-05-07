@@ -57,11 +57,11 @@ dtm_build1 <- function(raw_corpus, tfidf=FALSE)
   
   require(tidytext); require(tibble); require(tidyverse)
   
-  textdf = replace_bigram(raw_corpus)
+  text_df = replace_bigram(raw_corpus)
   # converting raw corpus to tibble to tidy DF
   #textdf = data_frame(text = raw_corpus);    
   
-  tidy_df = textdf %>%   
+  tidy_df = text_df %>%   
     mutate(doc = row_number()) %>%
     unnest_tokens(word, text) %>% 
     anti_join(stop_words) %>%
