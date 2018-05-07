@@ -52,7 +52,7 @@ text.clean = function(x,                    # x=text_corpus
 
 # +++
 
-dtm_build <- function(raw_corpus, tfidf=FALSE)
+dtm_build1 <- function(raw_corpus, tfidf=FALSE)
 {                  # func opens
   
   require(tidytext); require(tibble); require(tidyverse)
