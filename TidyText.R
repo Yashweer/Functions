@@ -223,14 +223,7 @@ streamline_dtm <- function(dtm,  # takes dtm as input
  
   return(doc_corpus) }
 ###############################################################################################################################
-
-	     
-	     
-	     
-	     
-	     
 # +++
-
 build_wordcloud <- function(dtm, 
                             max.words1=150,     # max no. of words to accommodate
                             min.freq=5,       # min.freq of words to consider
@@ -268,9 +261,7 @@ build_wordcloud <- function(dtm,
   
 } # func ends
 
-# test-driving func 3 via IBM data
-# system.time({ build_wordcloud(ibm_dtm_streamlined, plot.title="IBM TF wordlcoud") })    # 0.4 secs
-
+############################################################################################################################
 # +++
 
 plot.barchart <- function(dtm, num_tokens=15, fill_color="Blue")
@@ -291,9 +282,7 @@ plot.barchart <- function(dtm, num_tokens=15, fill_color="Blue")
   
   plot(p) }  # func ends
 
-# testing above func
-# system.time({ plot.barchart(ibm_dtm_streamlined) })    # 0.1 secs
-
+##########################################################################################################################	     
 # +++
 
 distill.cog = function(dtm, # input dtm
@@ -349,9 +338,7 @@ distill.cog = function(dtm, # input dtm
   
 } # distill.cog func ends
 
-# testing COG on ibm data
-# system.time({ distill.cog(ibm_dtm_streamlined, "COG for IBM TF") })    # 0.27 secs
-
+################################################################################################################################
 # +++
 
 build_cog_ggraph <- function(corpus,   # text colmn only
